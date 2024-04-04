@@ -19,7 +19,7 @@ function SubscriptionForm() {
 
     axios.defaults.withCredentials = true;
     useEffect(() => {
-        axios.get("http://localhost:3002/")
+        axios.get(`${process.env.REACT_APP_HOST}/`)
             .then(res => {
                 console.log(res.data);
                 if (res.data.valid) {
@@ -48,7 +48,7 @@ function SubscriptionForm() {
             return;
         }
 
-        axios.post('http://localhost:3002/api/check-email', { email: values.email })
+        axios.post(`${process.env.REACT_APP_HOST}/api/check-email`, { email: values.email })
             .then(res => {
                 const { exists } = res.data;
                 if (exists) {
@@ -56,7 +56,7 @@ function SubscriptionForm() {
                     setEmailExists(true);
                 } else {
                     // Si l'email n'existe pas, soumettre le formulaire
-                    axios.post('http://localhost:3002/api/register', values)
+                    axios.post(`${process.env.REACT_APP_HOST}/api/register`, values)
                         .then(res => {
                             console.log(res);
                             navigate('/login');

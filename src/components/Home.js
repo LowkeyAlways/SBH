@@ -11,7 +11,7 @@ function Home() {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get("http://localhost:3002/")
+    axios.get(`${process.env.REACT_APP_HOST}/`)
       .then( res => {
         console.log(res.data); // Log the response data
         if(res.data.valid) {

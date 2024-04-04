@@ -24,7 +24,7 @@ function EventsPage() {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     // Récupérer les événements depuis le backend
-    axios.get("http://localhost:3002/api/events")
+    axios.get(`${process.env.REACT_APP_HOST}/api/events`)
       .then(res => {
         const events = res.data;
 

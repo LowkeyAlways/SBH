@@ -18,7 +18,7 @@ function SubToEvent() {
   axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:3002/api/events/${id}/register`, formData)
+    axios.post(`${process.env.REACT_APP_HOST}/api/events/${id}/register`, formData)
         
       .then((response) => {
         

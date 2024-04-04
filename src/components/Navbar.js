@@ -13,7 +13,7 @@ function Header() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/")
+      .get(`${process.env.REACT_APP_HOST}/`)
       .then((res) => {
         console.log(res.data); // Log the response data
         if (res.data.valid) {
@@ -28,7 +28,7 @@ function Header() {
 
   const handleLogout = () => {
     axios
-      .post("http://localhost:3002/api/logout")
+      .post(`${process.env.REACT_APP_HOST}/api/logout`)
       .then((res) => {
         // Rediriger vers la page de connexion ou d'accueil après la déconnexion
         window.location.reload(); // Recharger la page pour refléter le changement d'état

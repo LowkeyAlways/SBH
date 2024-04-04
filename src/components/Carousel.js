@@ -6,7 +6,7 @@ function Carousel() {
     const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/api/events')
+    axios.get(`${process.env.REACT_APP_HOST}/api/events`)
       .then(response => {
         setEvents(response.data);
       })

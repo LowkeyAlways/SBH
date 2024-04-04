@@ -21,7 +21,7 @@ function Login() {
     axios.defaults.withCredentials = true;
 
     useEffect(() => {
-      axios.get("http://localhost:3002/")
+      axios.get(`${process.env.REACT_APP_HOST}/`)
           .then(res => {
               console.log(res.data);
               if (!res.data.valid) {
@@ -41,7 +41,7 @@ function Login() {
         e.preventDefault();
         setErrors(validation(email, password))
         if(errors.email === "" && errors.password === ""){
-            axios.post('http://localhost:3002/api/login', {email, password})
+            axios.post(`${process.env.REACT_APP_HOST}/api/login`, {email, password})
         .then(response => {
             navigate('/');
             window.location.reload();

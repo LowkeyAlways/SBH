@@ -25,27 +25,27 @@ function EventDetails() {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/api/events/${id}`)
+      .get(`${process.env.REACT_APP_HOST}/api/events/${id}`)
       .then((response) => {
         const eventData = response.data;
 
         // Récupérer les orateurs associés à l'événement
         axios
-          .get(`http://localhost:3002/api/event/${id}/speakers`)
+          .get(`${process.env.REACT_APP_HOST}/api/event/${id}/speakers`)
           .then((speakersResponse) => {
             const speakers = speakersResponse.data.speakers;
             eventData.speaker_names = speakers;
 
             // Récupérer les entrepreneurs associés à l'événement
             axios
-              .get(`http://localhost:3002/api/event/${id}/entrepreneurs`)
+              .get(`${process.env.REACT_APP_HOST}/api/event/${id}/entrepreneurs`)
               .then((entrepreneursResponse) => {
                 const entrepreneurs = entrepreneursResponse.data.entrepreneurs;
                 eventData.entrepreneur_names = entrepreneurs;
 
                 // Récupérer les partenaires associés à l'événement
                 axios
-                  .get(`http://localhost:3002/api/event/${id}/partners`)
+                  .get(`${process.env.REACT_APP_HOST}/api/event/${id}/partners`)
                   .then((partnersResponse) => {
                     const partners = partnersResponse.data.partners;
                     eventData.partner_names = partners;

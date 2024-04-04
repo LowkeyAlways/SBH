@@ -1,4 +1,5 @@
 // src/components/EventList.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
@@ -9,7 +10,7 @@ function EventList() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3002/api/events')
+    axios.get(`${process.env.REACT_APP_HOST}/api/events`)
       .then(response => {
         setEvents(response.data);
       })
