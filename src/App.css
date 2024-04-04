@@ -1,0 +1,587 @@
+/* src/App.css (or any appropriate CSS file) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #1862c0;
+}
+
+html {
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  margin: 0 !important;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar{
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.navbar-brand{
+  font-size: 1.8rem;
+}
+
+.navbar-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 0.5rem !important;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  padding-top: 1.25rem;
+  padding-bottom: 0 !important;
+  color: #fff;
+  padding-left: 1rem !important; /* Adjust opacity here */
+  text-align: left !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  width: 50%;
+  margin: auto;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease;
+}
+
+.login-form {
+  width: 40%;
+}
+
+.event_list {
+  margin-bottom: 10rem !important;
+}
+
+.carousel_p {
+  margin-top: 3rem;
+}
+
+nav ul li {
+  margin-left: 0.5rem;
+}
+
+.login {
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: #1862c0;
+  color: white;
+}
+
+.events_calendar {
+  width: 70%;
+  margin: 3rem auto 3rem auto;
+}
+
+.events_calendar ul li {
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.event_list_img {
+  width: 12rem;
+  margin: 0 1rem;
+}
+
+.margin_main {
+  padding: 2rem 0rem 5rem 0;
+}
+
+.event_details {
+  padding: 2rem 2rem 5rem 2rem;
+  width: 80%;
+  margin: 8rem auto;
+  border-radius: 1rem;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.descrp {
+  list-style-type: none;
+  margin: 2rem 0 !important;
+}
+
+.descrp li {
+  margin: 0 0.5rem;
+}
+
+.descrp li p {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.details_img {
+  text-align: center;
+}
+
+.details_img img {
+  width: 40rem;
+  margin-top: 3rem;
+  box-shadow: 15px 11px 26px #bebebe, -15px -15px 30px #ffffff;
+  border-radius: 40px;
+}
+
+.subEvent {
+  width: 50%;
+  margin: 15% auto;
+  text-align: center;
+}
+
+.subEvent form {
+  padding: 2rem;
+  box-shadow: 0 1px 3px #595959;
+  border-radius: 3rem;
+}
+
+.subEvent form input {
+  margin: 1rem 1rem;
+  width: 25rem;
+  padding: 0.2rem;
+}
+
+.subEvent form select {
+  margin: 1rem 1rem;
+  width: 25rem;
+  padding: 0.4rem;
+}
+
+.subEvent form button {
+  margin: 1rem 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  background-color: #1862c0;
+  color: white;
+}
+
+.title_event {
+  margin-top: 2rem;
+  color: var(--primary-color);
+}
+
+.descr_ev strong {
+  color: var(--primary-color);
+}
+
+.home_title {
+  color: var(--primary-color);
+}
+
+#basic-navbar-nav{
+  justify-content: flex-end;
+}
+
+.nav_login{
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: #1862c0;
+  color: white;
+}
+
+.navbar-nav a{
+  margin-left: 0.5rem;
+}
+
+
+.contact{
+  font-size: 1.3rem;
+    margin: 5rem auto;
+    width: 40%;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+@media screen and (min-width: 320px) {
+  .navbar-brand{
+    font-size: 1.1rem;
+  }
+  .carousel_p {
+    margin-top: 0;
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-control-prev, .carousel-control-next{
+    width: 35%;
+  }
+  .home_title {
+    text-align: center;
+  }
+  .navbar-nav a {
+    text-align: center;
+  }
+  .my-5{
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .events_calendar{
+    width: 100%;
+  }
+  .events_calendar ul{
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .events_calendar ul li {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .events_calendar h2{
+    text-align: center;
+  }
+  .event_list_img {
+    width: 12rem;
+    margin: 1rem 1rem;
+  }
+  .margin_main h1{
+    text-align: center;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .event_details {
+    padding: 2rem 2rem 3rem 2rem;
+    width: 100%;
+    margin: 2rem auto 8rem;
+    border-radius: 1rem;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  }
+  .details_img img {
+    width: 15rem;
+    margin-top: 0;
+    box-shadow: 15px 11px 26px #bebebe, -15px -15px 30px #ffffff;
+    border-radius: 15px;
+  }
+  .descrp {
+    list-style-type: none;
+    margin: 2rem 0 !important;
+    flex-direction: column;
+    padding-left: 0rem;
+    text-align: center;
+  }
+  .event_details ul{
+    padding-left: 0rem;
+  }
+  .subEvent {
+    width: 100%;
+    margin: 15% auto 40%;
+  }
+  .subEvent form {
+    margin: 2rem 0;
+  }
+  .subEvent form input {
+    margin: 1rem 0;
+    width: 15rem;
+  }
+  .subEvent form select {
+    margin: 1rem 0;
+    width: 15rem;
+  }
+  .subEvent form button {
+    margin: 0;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    background-color: #1862c0;
+    color: white;
+  }
+  .contacts{
+    flex-direction: column;
+  }
+  .contact{
+    font-size: 1.1rem;
+    margin: 10% auto 40% auto;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .event_list_img {
+    width: 17rem;
+    margin: 1rem 0;
+  }
+  .subEvent form input {
+    width: 16rem;
+  }
+  .subEvent form select {
+    width: 16rem;
+  }
+  .details_img img{
+    width: 18rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .carousel{
+    width: 90%;
+  }
+  .carousel-control-prev, .carousel-control-next{
+    width: 28%;
+  }
+  .event_list_img{
+    width: 20rem;
+  }
+  .details_img img{
+    width: 20rem;
+  }
+  .subEvent form input {
+    width: 19rem;
+  }
+  .subEvent form select {
+    width: 19rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 49.333333%;
+  }
+  .details_img img{
+    width: 30rem;
+  }
+  .subEvent {
+    width: 80%;
+}
+  .subEvent form input {
+    width: 30rem;
+  }
+  .subEvent form select {
+    width: 30rem;
+  }
+  .events_calendar ul li {
+    font-size: 0.9rem;
+    margin: 1rem 1rem;
+  }
+  .event_list_img {
+  margin: 1rem 1rem;
+  }
+  .login-form {
+    width: 80%;
+}
+.events_calendar h2 {
+  text-align: left;
+}
+.contact{
+  font-size: 1.1rem;
+  margin: 10% auto 20% auto;
+  width: 70%;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel{
+    width: 70%;
+  }
+  .carousel-control-prev, .carousel-control-next{
+    width: 17%;
+  }
+  .details_img img{
+    width: 40rem;
+  }
+  .subEvent {
+    width: 60%;
+    margin: 10% auto 20%;
+  }
+  .subEvent form input {
+    width: 30rem;
+  }
+  .subEvent form select {
+    width: 30rem;
+  }
+  .login-form {
+    width: 65%;
+  }
+  .contact{
+    font-size: 1.1rem;
+    margin: 10% auto 20% auto;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carousel{
+    width: 50%;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 26.333333%;
+  }
+  .event_details {
+    padding: 4rem 3rem 4rem 3rem;
+    width: 75%;
+    margin: 4rem auto 8rem;
+  }
+  .login-form {
+    width: 50%;
+  }
+  .events_calendar {
+    width: 65%;
+  }
+  .events_calendar ul li {
+    font-size: 1.1rem;
+    margin: 1rem 1rem;
+  }
+  .events_calendar {
+    width: 70%;
+    margin: 3rem auto 4rem auto;
+  }
+  .details_img img {
+    width: 45rem;
+  }
+  .subEvent {
+    width: 42%;
+    margin: 10% auto 20%;
+  }
+  .subEvent form input {
+    width: 30rem;
+  }
+  .subEvent form select {
+    width: 30rem;
+  }
+  .contacts{
+    flex-direction: row;
+  }
+  .contact{
+    font-size: 1.1rem;
+    margin: 10% auto 20% auto;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .carousel{
+    width: 80%;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 49.333333%;
+  }
+  .navbar {
+    padding: 2rem 0;
+    font-size: 1.7rem;
+  }
+  .navbar-brand {
+    font-size: 2.2rem;
+  }
+  .card-body{
+    font-size: 1.5rem;
+  }
+  .card-title{
+    font-size: 2rem;
+  }
+  .btn{
+    font-size: 1.6rem;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 17%;
+    font-size: 2rem;
+  }
+  .carousel-caption{
+    font-size: 1.5rem;
+  }
+  footer p{
+    font-size: 1.8rem;
+  }
+  .details_img img {
+    width: 80rem;
+  }
+  .descrp li h2{
+    font-size: 3rem;
+  }
+  .descrp li p {
+    font-size: 2.1rem;
+  }
+  .descr_ev{
+    font-size: 1.5rem;
+  }
+  .title_event{
+    font-size: 2.5rem;
+  }
+  .ev_addons li{
+    font-size: 1.6rem;
+  }
+  .event_details {
+    width: 140%;
+    margin: 4rem 0rem 8rem -20%;
+  }
+  .subEvent {
+    width: 60%;
+    margin: 20% auto 20%;
+  }
+  .subEvent form input {
+    width: 43rem;
+    margin: 1.6rem 0;
+
+  }
+  .subEvent form select {
+    width: 43rem;
+  }
+  .subEvent form label{
+    font-size: 2rem;
+  }
+  .subEvent form p{
+    font-size: 1.8rem;
+  }
+  .login-form{
+    font-size: 2rem;
+    width: 70%;
+  }
+  .form-control{
+    padding: 1.2rem .75rem;
+    font-size: 1.5rem;
+  }
+  .login-form legend{
+    font-size: 2.5rem;
+  }
+  .events_calendar ul li {
+    font-size: 2.1rem;
+  }
+  .events_calendar {
+    width: 90%;
+    margin: 3rem auto 4rem auto;
+  }
+  .event_list_img {
+    width: 27rem;
+  }
+  .contact{
+    font-size: 2rem;
+    margin: 10% auto 0 auto;
+    width: 40%;
+  }
+}
