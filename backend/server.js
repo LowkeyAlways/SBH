@@ -15,7 +15,7 @@ const saltRounds = 10;
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://sbh-production.up.railway.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
