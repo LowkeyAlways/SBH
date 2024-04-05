@@ -48,7 +48,7 @@ function SubscriptionForm() {
             return;
         }
 
-        axios.post(`${process.env.REACT_APP_HOST}/api/check-email`, { email: values.email })
+        axios.post(`https://sbh-production.up.railway.app/api/check-email`, { email: values.email })
             .then(res => {
                 const { exists } = res.data;
                 if (exists) {
